@@ -11,7 +11,7 @@ int SlovoDel()
 	{1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6}
 	};
 	char str[30];
-	printf("Игрок 1 вводит слово: ");
+	printf("Player 1 go: ");
 	scanf_s("%s", str, 30);
 	int L;
 	int Res1 = 0;
@@ -24,7 +24,7 @@ int SlovoDel()
 			if (str[i] == Rul[0][j]) Res1 += Rul[1][j];
 		}
 	}
-	printf("Игрок 2 вводит слово: ");
+	printf("Player 2 go: ");
 	scanf_s("%s", str, 30);
 	L = strlen(str);
 	for (int i = 0; i < L; i++)
@@ -34,11 +34,11 @@ int SlovoDel()
 			if (str[i] == Rul[0][j]) Res2 += Rul[1][j];
 		}
 	}
-	printf("Результат игрока 1 = %d\n", Res1);
-	printf("Результат игрока 2 = %d\n", Res2);
-	if (Res1 > Res2) printf("Игрок 1 победил!!!");
-	else if (Res2 > Res1) printf("Игрок 2 победил!!!");
-	else printf("Победила дружба (все проиграли)");
+	printf("Player 1 = %d\n", Res1);
+	printf("Player 2 = %d\n", Res2);
+	if (Res1 > Res2) printf("Player 1 win");
+	else if (Res2 > Res1) printf("Player 2 win");
+	else printf("Friendship win!");
 }
 
 int main(void)
